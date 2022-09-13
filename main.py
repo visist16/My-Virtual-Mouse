@@ -14,5 +14,8 @@ while True:
   output = hand_detector.process(rgb_frame)
   hands = output.multi_hand_landmarks
   
-  
+  if hands:
+        for hand in hands:
+            drawing_utils.draw_landmarks(frame, hand)
+            landmarks = hand.landmark
 
