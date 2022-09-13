@@ -18,4 +18,7 @@ while True:
         for hand in hands:
             drawing_utils.draw_landmarks(frame, hand)
             landmarks = hand.landmark
-
+        for id, landmark in enumerate(landmarks):
+                x = int(landmark.x*frame_width)
+                y = int(landmark.y*frame_height)
+                if id == 8:
