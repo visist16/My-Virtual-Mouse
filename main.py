@@ -32,4 +32,9 @@ while True:
                     thumb_x = screen_width/frame_width*x
                     thumb_y = screen_height/frame_height*y
                     print('outside', abs(index_y - thumb_y))    
+                    if abs(index_y - thumb_y) < 20:
+                        pyautogui.click()
+                        pyautogui.sleep(1)
+                    elif abs(index_y - thumb_y) < 100:
+                        pyautogui.moveTo(index_x, index_y)    
 
